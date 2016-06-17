@@ -2,10 +2,16 @@
 
 // create program that sums x consecutive digits 
 
-var total = 10;
-var sum = 0 
-while(n<total){
-	sum=sum+1; 
-	total--;
-	console.log(sum); 
-} 
+var totalCount = function(top){
+	var sum = 0;
+
+	for(i=1;i<(top+1);i++){
+		sum=i+sum;
+		console.log('the sum is '+sum+' '+'the current i value is '+i);
+				};
+
+	console.log('The total is'+' '+sum);
+
+};
+
+totalCount(10)
