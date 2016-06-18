@@ -14,4 +14,4 @@ var totalCount = function(top){
 
 };
 
-totalCount(100)
+totalCount(500)
