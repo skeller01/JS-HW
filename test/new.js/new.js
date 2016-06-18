@@ -14,4 +14,4 @@ var totalCount = function(top){
 
 };
 
-totalCount(10)
+totalCount(100)
