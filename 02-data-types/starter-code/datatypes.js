@@ -7,10 +7,23 @@
  * (1, 3) and (4, 9)
  */
 
+ //Math.pow(3,2)
+ // this is 3 square = 3^2 
+
 var x1 = 1;
 var y1 = 3;
+var x2 = 4; 
+var y2 = 9; 
 
 // Your code here
+var distance
+diff_x = (x2 - x1)*(x2 - x1);
+diff_y = (y2 - y1)*(y2 - y1);
+distance = Math.sqrt(diff_x+diff_y);
+
+console.log(distance);
+console.log("3^10 = "+ Math.pow(3,10))
+
 
 /**
  * Question 2
@@ -19,9 +32,12 @@ var y1 = 3;
  *
  */
 
+ //Volume of a  sphere is 4/3 pi r^3
+
 var radius = 5;
 // Your code here
-
+sphere = (4/3)*Math.PI*Math.pow(radius,3)
+console.log(sphere)
 
 /**
  * Question 3
