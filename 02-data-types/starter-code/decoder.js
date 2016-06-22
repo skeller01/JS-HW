@@ -4,7 +4,7 @@
  */
 
  // Your code here
-
+var code = [];
  /**
   * Question 2
   * Add the following characters to the end of the code array:
@@ -12,6 +12,9 @@
   * 'i', 't', 'l', 'a', 'v', 'o', 'x', 'e', 'r',
   * 'o', 'm', 'c'
   */
+  code.push('x', 'e', 's', 'a', 'b', 'l', 'p', 'e', 'h', 'n','i', 't', 'l', 'a', 'v', 'o', 'x', 'e', 'r','o', 'm', 'c');
+
+  console.log(code);
 
 // Your code here
 
@@ -22,6 +25,10 @@
  */
 
 // Your code here
+//console.log(code);
+code.pop();
+code.shift();
+console.log(code);
 
 /**
  * Question 4
@@ -29,7 +36,8 @@
  */
 
 // Your code here
-
+code.reverse();
+console.log(code);
 /**
  * Question 5
  * Replace the 5th element and 14th element with space characters.
@@ -37,7 +45,9 @@
  */
 
 // Your code here
-
+code[4]=" ";
+code[13]=" ";
+console.log(code);
 /**
  * Question 6
  * Join the array with an empty String in between each character and log the
@@ -45,3 +55,8 @@
  */
 
  // Your code here
+code.join("");
+console.log(code);
+
+
+
