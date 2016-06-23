@@ -12,8 +12,33 @@
  * Log both the random number grade and its corresponding letter grade to the console.
  */
 
- var testScore;
+ var testScore = Math.random()*100;
 
+console.log("One test score is "+ testScore);
+
+
+
+function grader(testScore){
+	if(testScore>=90 && testScore<=100){
+		return "A";
+	}else if(testScore>=80 && testScore<90){
+		return "B";
+	}else if(testScore>=70 && testScore<80){
+		return "C";
+	}else if(testScore>=60 && testScore<70){
+		return "D";
+	}else{
+		return "F";
+	}
+}
+
+
+
+for(i=1;i<21;i++){
+	testScore=Math.random()*100;
+	console.log(grader(testScore));
+ }
+ 
 
 /**
  * Question 2
@@ -22,9 +47,13 @@
  *
  */
 
-var secondTestScore;
+var firstTestScore= Math.random()*100;
+var secondTestScore=Math.random()*100;
 
-var average;
+var average = (firstTestScore+secondTestScore)/2;
 
 // Use a ternary to assign the message.
-var message;
+//var allowed = (age > 18) ? "yes" : "no";
+
+var message = (average>=80)?"Well done!":"Better luck next time";
+console.log(message);
