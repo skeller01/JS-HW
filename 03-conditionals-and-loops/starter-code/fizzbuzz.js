@@ -9,7 +9,18 @@
 
 // ##### Step 1:
 // Construct a for loop that iterates through, and `console.log()`'s out, numbers 1 - 100.
+for(i=1; i<101; i++){
 
+	if((i%3===0 && i%5===0)){
+		console.log("fizzbuzz");
+		}else if(i%5===0){
+			console.log("buzz");
+		}else if(i%3===0){
+			console.log("fizz");
+		}else{
+			console.log(i);
+		}
+}
 
 
 // ##### Step 2:
@@ -30,3 +41,17 @@
 
 // ##### Step 5:
 // Convert your for loop to a while loop.
+var a = 1
+while(i<101){
+
+	if((i%3===0 && i%5===0)){
+		console.log("fizzbuzz");
+		}else if(i%5===0){
+			console.log("buzz");
+		}else if(i%3===0){
+			console.log("fizz");
+		}else{
+			console.log(i);
+		}
+		i++
+}
