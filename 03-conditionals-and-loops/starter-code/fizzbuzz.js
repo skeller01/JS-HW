@@ -42,16 +42,16 @@ for(i=1; i<101; i++){
 // ##### Step 5:
 // Convert your for loop to a while loop.
 var a = 1
-while(i<101){
+while(a<101){
 
-	if((i%3===0 && i%5===0)){
+	if((a%3===0 && a%5===0)){
 		console.log("fizzbuzz");
-		}else if(i%5===0){
+		}else if(a%5===0){
 			console.log("buzz");
-		}else if(i%3===0){
+		}else if(a%3===0){
 			console.log("fizz");
 		}else{
-			console.log(i);
+			console.log(a);
 		}
-		i++
+		a++
 }
