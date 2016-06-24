@@ -7,23 +7,24 @@
 // => 34578 Dolphin Street, Wonka NY, 44506
 
 //Create arrays for each element of an address
-var streetNumber = Math.round(Math.random()*100,0);
+var streetNumber = Math.round(Math.random()*(999-100)+500,0);
 var streetName = ["Oak Street","Willow Drive","Rebecca Street", "Waterbury Lane"];
 var cityName = ["Washington", "New York City", "Chicago", "Los Angeles", "San Francisco"];
 var stateName = ["DC","New York","Illinois","California"];
-var zipCode = ["20001","13414","90210","43212"];
+var zipCode = Math.round(Math.random()*(99999-10000)+50000,0);
 
 //create different random numbers to pull from the arrays 
-var randStreetName = Math.round(Math.random()*streetName.length,0);
-var randCityName = Math.round(Math.random()*cityName.length,0);
-var randStateName = Math.round(Math.random()*stateName.length,0);
-var randZipCode  = Math.round(Math.random()*zipCode.length,0);
+//Subtract one from the length to avoid undefined array errors
+var randStreetName = Math.round(Math.random()*(streetName.length-1),0);
+var randCityName = Math.round(Math.random()*(cityName.length-1),0);
+var randStateName = Math.round(Math.random()*(stateName.length-1),0);
 
+//Print the randomly generated address 
 console.log(streetNumber);
 console.log(streetName[randStreetName]);
 console.log(cityName[randCityName]);
 console.log(stateName[randStateName]);
-console.log(zipCode[randZipCode]);
+console.log(zipCode);
 
 
 
