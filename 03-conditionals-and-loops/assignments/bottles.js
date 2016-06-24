@@ -20,8 +20,8 @@ var down_1 = " You take it down, pass it around, "
 var x = 99; 
 //string together the sentence with the component variables
 //create sentence variable 
-var sentence = x+wall+x+bottles+down+x-1+wall;
-console.log(sentence);
+var sentence = x+wall+x+bottles+down+(x-1)+wall;
+//console.log(sentence);
 
 
 //Beer count-down loop 
