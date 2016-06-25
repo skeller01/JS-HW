@@ -8,42 +8,73 @@
 // 5: Friday
 // 6: Saturday
 // Write a second switch statement to log 'Weekday' or 'Weekend' based on a given number. Use fall-through.
-var chooseNumber=prompt("Choose a number: 0 to 6");
-console.log(typeOf(chooseNumber));
+//var chooseNumber=1;
 
-switch(chooseNumber){
-	case '0':
-		console.log("Sunday");
-		break;
-	case '1':
-		console.log("Monday");
-		break;
-	case '2':
-		console.log("Tuesday");
-		break;
-	case '3':
-		console.log("Wednesday");
-		break;
-	case '4':
-		console.log("Thursday");
-		break;
-	case '5':
-		console.log("Friday");
-		break;
-    case '6':
-		console.log("Saturday");
-		break;
-	default:
-		console.log("Try Again?")
-		chooseNumber=prompt("Choose a number: 0 to 6");
-}
+//give directions to the user for both starting and stopping the game
+console.log("Please pick a number from 0 to 6");
+console.log("When you're done, please press ctrl+c to exit");
+console.log("You can also type 'quit' ");
 
-switch(chooseNumber){
-	case ('1'||'2'||'3'||'4'||'5'):
-		console.log("Weekday");
-		break;
-	case ('0'||'6'):
-		console.log("Weekend");
-		break;
+//take text and run the relevant switch statements 
+  process.stdin.resume();
+  process.stdin.setEncoding('utf8');
+  var util = require('util');
+
+  process.stdin.on('data', function (text) {
+    //console.log('received data:', util.inspect(text));
+    day(text);
+    weekend(text);
+    if (text === 'quit\r\n') {
+      done();
+    }
+  });
+
+  function done() {
+    console.log('Now that process.stdin is paused, there is nothing more to do.');
+    process.exit();
+  }
+
+//switch statement definitions for both the day and weekend/not weekend
+function day(util){
+		switch(util){
+			case "0\r\n":
+				console.log("Sunday");
+				break;
+			case "1\r\n":
+				console.log("Monday");
+				break;
+			case "2\r\n":
+				console.log("Tuesday");
+				break;
+			case "3\r\n":
+				console.log("Wednesday");
+				break;
+			case "4\r\n":
+				console.log("Thursday");
+				break;
+			case "5\r\n":
+				console.log("Friday");
+				break;
+		    case "6\r\n":
+				console.log("Saturday");
+				break;
+			default:
+				console.log("Try Again?");
+				
+		};
+
+		
+			}
+	function weekend(util){
+			switch(util){
+			case "1\r\n"||"2\r\n"||"3\r\n"||"4\r\n"||"5\r\n":
+				console.log("Weekday");
+				break;
+			case "0\r\n"||"6\r\n":
+				console.log("Weekend");
+				break;
+			default:
+				console.log("Unsure what you're asking?");
 	
-}
+			}
+		};	
