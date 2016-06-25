@@ -65,16 +65,23 @@ function day(util){
 
 		
 			}
+
+	//code weekend function with fall-through
 	function weekend(util){
 			switch(util){
-			case "1\r\n"||"2\r\n"||"3\r\n"||"4\r\n"||"5\r\n":
-				console.log("Weekday");
-				break;
-			case "0\r\n"||"6\r\n":
+			case "0\r\n":		
+			case "6\r\n":
 				console.log("Weekend");
 				break;
+			case "1\r\n":								
+			case "2\r\n":				
+			case "3\r\n":		
+			case "4\r\n":
+			case "5\r\n":
+				console.log("Weekday");
+				break;
 			default:
-				console.log("Unsure what you're asking?");
+				console.log("Try Again?");
 	
 			}
 		};	
