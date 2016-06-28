@@ -15,7 +15,7 @@ var words = [
   'whispering',
   'astronautically',
   'typical',
-  'stretch'
+  'stretch',
   'side',
   'upset',
   'river',
@@ -39,6 +39,29 @@ var words = [
 
 // ##### Step 1:
 // Construct a for loop that iterates through the word array, and `console.log()`'s out the length of each string.
+
+//print out the directions and requirements for fuzz bizz and fuzzbizz
+console.log("Fuzz if divisible by 3");
+console.log("Bizz if divisible by 5");
+console.log("Fuzz if divisible by 3 and 5 then fuzzbizz");
+
+
+
+//Full for loop for fuzzbuzz
+for(i in words){
+  //console.log("the word is " +words[i]+" and the length is "+words[i].length);
+  if(words[i].length%3===0 && words[i].length%5===0){
+    console.log("fuzzbizz"+" "+words[i]+" "+"the count is "+words[i].length);
+  }else if(words[i].length%5===0){
+    console.log("bizz"+" "+words[i]+" "+"the count is "+words[i].length);
+  }else if(words[i].length%3===0){
+    console.log("fuzz"+" "+words[i]+" "+"the count is "+words[i].length);
+  }
+
+  else{
+    console.log("The word is "+words[i]+" "+"and the length is "+words[i].length);
+  }
+}
 
 
 // ##### Step 2:
