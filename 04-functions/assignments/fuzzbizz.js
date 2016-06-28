@@ -64,6 +64,28 @@ for(i in words){
 }
 
 
+
+//Write the fuzzbizz with a while loop 
+//define the counter 
+var counter = 0;
+
+//start the while loop 
+while(counter<words.length){
+ if(words[counter].length%3===0 && words[counter].length%5===0){
+    console.log("fuzzbizz"+" "+words[counter]+" "+"the count is "+words[counter].length);
+  }else if(words[counter].length%5===0){
+    console.log("bizz"+" "+words[counter]+" "+"the count is "+words[counter].length);
+  }else if(words[counter].length%3===0){
+    console.log("fuzz"+" "+words[counter]+" "+"the count is "+words[counter].length);
+  }
+
+  else{
+    console.log("The word is "+words[counter]+" "+"and the length is "+words[counter].length);
+  } 
+  counter++;
+};
+
+
 // ##### Step 2:
 // Add an `if/else` statement that logs the string `"fuzz"` if the value being iterated over has a length divisible by `3`; otherwise, log out the length.
 // Hint: Remember the "modulus" operator.
