@@ -6,6 +6,18 @@
  *
  */
 
+function rollDice(sides,rolls){
+var x = Math.random(); 
+for(i=1;i<=rolls;i++){
+	x = Math.random();
+	console.log(Math.round(x*(sides-1)+1,0))
+	
+}
+}
+
+//rollDice(6,1);
+
+
 
 
 /*
@@ -15,3 +27,8 @@
  * Call your function.
  *
  */
+function rollTwoDice(){
+	rollDice(6,2);
+}
+
+rollTwoDice();
