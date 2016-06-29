@@ -5,17 +5,17 @@
  * Call your function.
  *
  */
-
+console.log("################################### Question 1  ###########################")
 function rollDice(sides,rolls){
-var x = Math.random(); 
-for(i=1;i<=rolls;i++){
-	x = Math.random();
-	console.log(Math.round(x*(sides-1)+1,0))
-	
-}
+	var x = Math.random(); 
+	for(i=1;i<=rolls;i++){
+		x = Math.random();
+		console.log(Math.round(x*(sides-1)+1,0))
+	}	
+		
 }
 
-//rollDice(6,1);
+rollDice(6,5);
 
 
 
@@ -27,6 +27,7 @@ for(i=1;i<=rolls;i++){
  * Call your function.
  *
  */
+console.log("################################### Question 2 ###########################")
 function rollTwoDice(){
 	rollDice(6,2);
 }
@@ -38,17 +39,52 @@ rollTwoDice();
 // for example, 2 dice, would be 4,3,7. 
 // Those would be returned values 
 
-function sum(){
-	var count = 0;
-	for(var i = 0; i < array.length; i++)
-		{
-    		count = count + array[i];
-		}
-	return count; 
+console.log("################################### Question 3 ###########################")
+
+//var batman = [1,2,3,5];
+//First create a sumAll variable for handling the summation of an array
+function sumAll(x){
+	var count = 0; 
+	for(i in x){
+		count+=x[i]; 
 	};
 
-function nRolls(rolls){
-	console.log(3);
-	console.log(4);
-	
+	return count;	
 }
+
+//Next use the sumAll function and rollDice function to sum up a series of rolls 
+// we also want to roll n times and with x side, this will sum up the rolls. 
+function rollAndSumDice(sides,rolls){
+	var store = []; 
+	for(i=0;i<=rolls;i++){
+		x = Math.random();
+		store[i]=Math.round(x*(sides-1)+1,0);
+		//console.log(store[i]);
+	      };
+	console.log(store);
+	return sumAll(store);	
+		}
+
+console.log(rollAndSumDice(6,6));
+
+// console.log(rollAndSumDice(6,4));
+// console.log(" #### the sum is: "+rollAndSumDice(6,2)+" ####");
+
+
+
+
+
+
+
+
+// function sumAll(){
+// 	var count = 0;
+// 	for(var i = 0; i < arguments.length; i++)
+// 		{
+//     		count = count + arguments[i];
+// 		}
+// 	return count;
+// 	};
+
+
+
