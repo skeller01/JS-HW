@@ -5,7 +5,14 @@
  *
  */
 
+function dayOfWeek(){
+var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+var choice = Math.round(Math.random()*(7-1)+1,0);
+console.log(days[choice]);
+//console.log(choice);
+}
 
+dayOfWeek();
 /*
 *
 * Question 2

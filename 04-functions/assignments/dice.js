@@ -32,3 +32,23 @@ function rollTwoDice(){
 }
 
 rollTwoDice();
+
+
+//Program shall log n dice rolls and the sum of those dice rolls
+// for example, 2 dice, would be 4,3,7. 
+// Those would be returned values 
+
+function sum(){
+	var count = 0;
+	for(var i = 0; i < array.length; i++)
+		{
+    		count = count + array[i];
+		}
+	return count; 
+	};
+
+function nRolls(rolls){
+	console.log(3);
+	console.log(4);
+	
+}
