@@ -19,7 +19,9 @@ dayOfWeek();
 * Write a function that has two numbers parameters and multiplies them together.
 *
 */
-
+function multNumbers(a,b){
+	return a*b; 
+}
 
 /*
 *
