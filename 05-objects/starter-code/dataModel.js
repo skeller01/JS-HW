@@ -25,3 +25,11 @@ var quizScience={
 	totalPoints:100
 };
 
+console.log(quizScience.question1+" "+quizScience.totalPoints)
+
+//another option - for pracice 
+var newQuiz = new Object();
+newQuiz.question1 = "What the hell man";
+newQuiz.points = 100; 
+
+console.log(newQuiz.points);
