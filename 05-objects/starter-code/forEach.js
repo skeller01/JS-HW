@@ -46,3 +46,16 @@
    var message = planet.name + ' is ' + planet.distance + ' million miles from the sun.';
    console.log(message);
  }
+
+
+//in class example 
+function forEach(arr,func){
+  for(i in arr){
+    func(arr[i]);
+  };
+};
+
+myArray=[1,2,3,4];
+forEach(myArray,console.log);
+
+
