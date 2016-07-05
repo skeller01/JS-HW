@@ -1,13 +1,22 @@
+//for each function 
+function forEach(arr,func){
+	for(i in arr){
+		func(arr[i]);
+	};
+};
+
+
 //testing the forEach function 
-myArray=[1,2,3]
+myArray=[1,2,3];
 
 //create a square function 
 function squareMe(x){
 	return x*x;
-}
+};
 
 //show off the forEach function 
-squaredArray=myArray.forEach(squareMe);
+squaredArray=forEach(myArray,squareMe);
 
 //print off the new array
-console.log(squaredArray);
+//won't print because forEach doesn't return anything
+// console.log(squaredArray);
