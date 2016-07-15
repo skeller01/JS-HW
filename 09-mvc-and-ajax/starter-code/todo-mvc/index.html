@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>TODO MVC</title>
-</head>
-<body>
-	<h1>TODO</h1>
+	<head>
+		<title>TODO MVC</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<h1>TODO</h1>
 
-  <input id="todoInput" type="text">
-  <button id="submit">Submit</button>
+	  <input id="todoInput" type="text">
+	  <button id="submit">Submit</button>
 
-	<ul id="todoList">
+		<ul id="todoList">
 
-	</ul>
+		</ul>
 
 
 
-	<!-- bring in our jquery library -->
-	<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+		<!-- bring in our jquery library -->
+		<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
 
-	<!-- bring in handlebars -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+		<!-- bring in handlebars -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 
-	<!-- bring in our JS file -->
-	<script type="text/javascript" src="js/index.js"></script>
+		<!-- bring in our JS file -->
+		<script type="text/javascript" src="js/index.js"></script>
 
-	<!-- new script tag for class -->
-	<script type="text/x-handlebars-template" id="todo-template">
-		<li>{{text}}</li>
-	</script>
+		<!-- new script tag for class -->
+		<script type="text/x-handlebars-template" id="todo-template">
+			<li class = "{{#if complete}}completed{{/if}}">{{text}} <a href="#" class="complete">Complete</a></li>
+		</script>
 
-	
+		
 
-</body>
+	</body>
 </html>
