@@ -1,0 +1,86 @@
+{
+  "name": "Review Quiz",
+  "id": "review",
+  "questions": [
+    {
+      "q": "What can HTTP be used for?",
+      "a": "d",
+      "choices": {
+        "a": "To load JSON data from a server",
+        "b": "To load the HTML for a website",
+        "c": "To load asset files, like JS, CSS, and images",
+        "d": "All of the Above"
+      }
+    },
+    {
+      "q": "In the following URL, what is `api.openweathermap.org` \n`http://api.openweathermap.org/data/2.5/weather?q=London`",
+      "a": "c",
+      "choices": {
+        "a": "protocol",
+        "b": "query",
+        "c": "host",
+        "d": "path"
+      }
+    },
+    {
+      "q": "Where in a HTTP request would be the best place put information about authentication?",
+      "a": "a",
+      "choices": {
+        "a": "headers",
+        "b": "url",
+        "c": "method",
+        "d": "body"
+      }
+    },
+    {
+      "q": "What is the format most commonly used to communicate data between client and server?",
+      "a": "b",
+      "choices": {
+        "a": "XML",
+        "b": "JSON",
+        "c": "JS",
+        "d": "HTML"
+      }
+    },
+    {
+      "q": "What is not a valid value type in JSON data?",
+      "a": "c",
+      "choices": {
+        "a": "Number",
+        "b": "Array",
+        "c": "Function",
+        "d": "Object"
+      }
+    },
+    {
+      "q": "What does the PUT method mean in HTTP?",
+      "a": "c",
+      "choices": {
+        "a": "Read",
+        "b": "Create",
+        "c": "Update",
+        "d": "Remove"
+      }
+    },
+    {
+      "q": "When is a callback function needed?",
+      "a": "b",
+      "choices": {
+        "a": "When we aren't sure what function to call",
+        "b": "When a function is asynchronous",
+        "c": "When a function has multiple steps",
+        "d": "Only when making AJAX requests"
+      }
+    },
+    {
+      "q": "What makes an asynchronous function different than a synchronous one?",
+      "a": "d",
+      "choices": {
+        "a": "Only jQuery has asynchronous functions",
+        "b": "Synchronous function only do one thing",
+        "c": "Asynchronous functions happen next time the page is refreshed",
+        "d": "Asynchronous functions allow code to continue before completing"
+      }
+    }
+  ]
+}
