@@ -4,15 +4,17 @@ var count = 0;
 // View
 
 function renderCount() {
+  // console.log("made it to render")
   var source = $('#count-template').html();
   var template = Handlebars.compile(source);
+  // console.log(source);
 
   var countHtml = template({
     count: count,
-    high: count > 100
+    high: count > 100,
     low: count < 0
   });
-  $('#counts').html(countHtml);
+  $('#count').html(countHtml);
 }
 
 // Controller
@@ -23,17 +25,17 @@ function setup() {
 
   // Setup the event listeners
   $('#plus').on('click', increment);
-  $('#minus').on('click', decremment);
+  $('#minus').on('click', decrement);
   $('#zero').on('click', zero);
 }
 
 function increment() {
-  count()++;
+  count++;
   renderCount();
 }
 
 function decrement() {
-  count -= 2;
+  count --;
   renderCount();
 }
 

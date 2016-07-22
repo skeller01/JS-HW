@@ -3,9 +3,9 @@
 var cardInfo = {
   firstName: '',
   lastName: '',
-  cardNumber: ,
+  cardNumber: '',
   expiration: '',
-  cvv: '';
+  cvv: ''
 };
 
 // View
@@ -15,13 +15,15 @@ var cardInfo = {
 
 var template;
 $(document).ready(function() {
+  // console.log("getting to template");
   var templateSource = $('#card-template').html();
-  template = Handlebars.compile(templatSource);
+  template = Handlebars.compile(templateSource);
 });
 
 function renderCard() {
+  // console.log("getting to render");
   var cardHtml = template(cardInfo);
-  $('#cardContianer').htm(cardHtml);
+  $('#cardContainer').html(cardHtml);
 }
 
 // Controller
@@ -29,17 +31,19 @@ function renderCard() {
 $(document).ready(function() {
   // First render
   renderCard();
+  // console.log("getting to controller1`");
 
   // Setup Listeners
   $('input[type="text"]').on('input', function() {
+    // console.log("getting to input listeners");
     // Get the value enetered by the user
     var enteredValue = $(this).val();
 
     // Get the name property, which matches the key in the model object
-    var inputKey = $('input').attr('name');
+    var inputKey = $(this).attr('name');
 
     // Update the model
-    cardInfo.inputKey = enteredValue;
+    cardInfo[inputKey] = enteredValue;
 
     // Rerender the View
     renderCard();
