@@ -1,3 +1,6 @@
+// We needed to install an ajax request system that did three things. First it got the data - this required a utility subsystem for building our request text - next it updated the model and last it re-rendered the display. 
+
+
 // Model
 
 var weather = {
@@ -40,8 +43,32 @@ $(document).ready(function() {
     var country = $('input[name="country"]').val();
 
     // 1. Make the request to OpenWeatherMap API
-    // 2. Update model
-    // 3. Render view
+    //6a45087d66e8ed3f9d0af20ef6014ad1
+    $.ajax({
+      type: 'GET',
+      url: buildURL(city, country),
+      success: function (data) {
 
+        // Update the model
+        weather.city = city;
+        weather.country = country,
+        weather.temperature = data.main.temp;
+        weather.description = data.weather[0].description;
+        weather.humidity = data.main.humidity;
+        weather.clouds = data.clouds.all;
+
+        // Rerender the View
+        renderWeather();
+      }
+    })
   });
 });
+function buildURL(city, country) {
+  var baseURL = 'http://api.openweathermap.org/data/2.5/weather?';
+  baseURL += 'APPID=6a45087d66e8ed3f9d0af20ef6014ad1';
+  baseURL += '&units=imperial';
+  baseURL += '&q=' + city + ',' + country;
+
+  return baseURL;
+}
+
