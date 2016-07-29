@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // We needed to install an ajax request system that did three things. First it got the data - this required a utility subsystem for building our request text - next it updated the model and last it re-rendered the display. 
 
 // updating the model required using the api documentation to figure out how to call the data provided 
@@ -11,7 +9,6 @@
 // notice how the utility function was important because the URL was what created the query for the JSON data object. 
 
 
->>>>>>> 740c213fbb5b5ac7722cb669ce5c4e4850e20439
 // Model
 
 var weather = {
@@ -54,13 +51,6 @@ $(document).ready(function() {
     var country = $('input[name="country"]').val();
 
     // 1. Make the request to OpenWeatherMap API
-<<<<<<< HEAD
-    // 2. Update model
-    // 3. Render view
-
-  });
-});
-=======
     //6a45087d66e8ed3f9d0af20ef6014ad1
     $.ajax({
       type: 'GET',
@@ -91,4 +81,3 @@ function buildURL(city, country) {
   return baseURL;
 }
 
->>>>>>> 740c213fbb5b5ac7722cb669ce5c4e4850e20439
