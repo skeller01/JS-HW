@@ -2,7 +2,7 @@
 
 var model = {
   loggedIn: false,
-  user:undefined,
+  user: undefined,
   messages: {
     ab32cd4: {
       author: 'cool@example.com',
@@ -49,28 +49,26 @@ function setup() {
   // TODO: Event Listeners
   $('#formContainer').on('click', '#register', handleRegister);
   $('#formContainer').on('click', '#login', handleLogin);
-  $('#formContainer').on('click','#signOut',handleSignOut);
+  $('#formContainer').on('click', '#signOut', handleSignOut);
   firebase.auth().onAuthStateChanged(handleAuthStateChange);
 }
 
-function handleAuthStateChange(){
+function handleAuthStateChange() {
   var user = firebase.auth().currentUser;
-  if(user){
-      model.loggedIn=true;
-      model.user=user;
 
-      renderForm();
-      renderChat();
-  }else{
-    model.loggedIn=false;
+  if (user) {
+    model.loggedIn = true;
+    model.user = user;
+  } else {
+    model.loggedIn = false;
     model.user = undefined;
-
-      renderForm();
-      renderChat();
   }
+  
+  renderForm();
+  renderChat();
 }
 
-function handleSignOut(){
+function handleSignOut() {
   firebase.auth().signOut();
 }
 
@@ -88,4 +86,19 @@ function handleLogin() {
   firebase.auth().signInWithEmailAndPassword(email, password);
 }
 
+
 $(document).ready(setup);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
