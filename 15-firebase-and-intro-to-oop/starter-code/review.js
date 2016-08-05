@@ -25,6 +25,18 @@
 // }
 // ```
 
+//This doesn't work because the functions are asychronous
+//the only way to guarantee order is with call back functions
+$.ajax({
+	url:"/game/123/end-game",
+	type: 'PUT'
+	success: function(){
+		$.get('/current-game',function(data){
+		//update model 
+			});
+	}
+});
+
 
 // ## 2. Incorporate the score's id into the following template.
 //
@@ -47,19 +59,19 @@
 // }
 // ```
 //
-<script id="standings-template" type="text/x-handlebars-template">
-{{#if token}}
-	<ul class="standings">
-		{{#each scores}}
-			<li class="{{#if winning}}winning{{/if}}">
-        <h3>{{user}}</h3>
-        <h4>{{points}} points</h4>
-        <button class="plus-one">+</button>
-	    </li>
-		{{/each}}
-	</ul>
-{{/if}}
-</script>
+// <script id="standings-template" type="text/x-handlebars-template">
+// {{#if token}}
+// 	<ul class="standings">
+// 		{{#each scores}}
+// 			<li class="{{#if winning}}winning{{/if}}">
+//         <h3>{{user}}</h3>
+//         <h4>{{points}} points</h4>
+//         <button class="plus-one">+</button>
+// 	    </li>
+// 		{{/each}}
+// 	</ul>
+// {{/if}}
+// </script>
 
 
 // ## 3. In the following event listener function, extract the score id from HTML.
@@ -68,4 +80,5 @@ $('body').on('click', '.plus-one', updateScore);
 
 function updateScore() {
   // get the id of the clicked score button
+	var clickedId = $(this).parent().attr('data-id');  
 }
