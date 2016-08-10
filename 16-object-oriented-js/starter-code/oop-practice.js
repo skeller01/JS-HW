@@ -1,7 +1,12 @@
 // 1. Write a function that takes two string arguments (firstName and lastName)
 // and returns an Object that has those two properties.
 
-
+function Person(firstName,lastName){
+	return {
+		firstName: firstName,
+		lastName: lastName
+	};
+}
 
 // 2. Convert this regular function into a Class constructor function and use it to create
 // a car instance. Log the car instance's model to the console.
@@ -11,11 +16,18 @@
 //   newCar.make = make;
 //   newCar.model = model;
 //   newCar.year = year;
+//   return newCar;
 // }
+function Car(make,model,year){
+	this.make=make;
+	this.model=model;
+	this.year=year;
+};
+
 //
-// var jacobsCar = makeCar('Kia', 'Forte', 2014);
+var jacobsCar = new Car('Kia', 'Forte', 2014);
 
-
+console.log(jacobsCar.model);
 
 // 3. Convert this regular function into a Class constructor function and use it to create
 // a tweet instance. Log the tweet instance's text to the console.
@@ -27,6 +39,17 @@
 //     tags: tags
 //   };
 // }
+
+function Tweet(userId,text,tags){
+	this.userId = userId;
+	this.text = text; 
+	this.tags=tags; 
+}
+
+var myTweet = new Tweet("happy","days","#whoknows");
+
+console.log(myTweet instanceof Tweet);
+console.log(jacobsCar instanceof Car);
 //
 // var myTweet = makeTweet(1234, 'This is my tweet #yay', ['yay']);
 
